@@ -1,0 +1,71 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Invitación de San Valentín</title>  
+    <style>  
+        body {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            height: 100vh;  
+            background-color: #ffefff;  
+            font-family: Arial, sans-serif;  
+            text-align: center;  
+        }  
+        h1 {  
+            color: #d5006d;  
+            margin-bottom: 20px;  
+        }  
+        button {  
+            background-color: #ff4081;  
+            color: white;  
+            border: none;  
+            padding: 10px 20px;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            font-size: 16px;  
+            margin: 10px;  
+            transition: background-color 0.3s;  
+        }  
+        button:hover {  
+            background-color: #c51162;  
+        }  
+        .respuesta {  
+            margin-top: 20px;  
+            font-size: 24px;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+    <h1>Aleyda, ¿quieres ser mi San Valentín?</h1>  
+    
+    <img src="mi-imagen.jpg" alt="Imagen romántica" style="max-width: 100%; height: auto;">  
+    
+    <button id="si-btn">Sí</button>  
+    <button id="no-btn">No</button>  
+
+    <div class="respuesta" id="respuesta"></div>  
+
+    <script>  
+        document.getElementById("si-btn").onclick = function() {  
+            document.getElementById("respuesta").innerHTML = "VISTE QUE SI SABÍA PROGRAMAR WEB UN POCO 😊";  
+        };  
+
+        document.getElementById("no-btn").onclick = function() {  
+            const respuestas = [  
+                "¿ESTÁS SEGURA?",  
+                "TE MANDO LA MOTO.",  
+                "ESTÁ BIEN, ME VOY A JUGAR.",  
+                "YA PE."  
+            ];  
+            const respuestaAleatoria = respuestas[Math.floor(Math.random() * respuestas.length)];  
+            document.getElementById("respuesta").innerHTML = respuestaAleatoria;  
+        };  
+    </script>  
+
+</body>  
+</html>
